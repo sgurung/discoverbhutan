@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,14 +17,11 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".StageOne"
-            android:label="Stage One"/>
+        <activity
+            android:name=".StageOne"
+            android:label="Stage One" />
 
         <service
             android:name=".GeofenceTransitionService"
@@ -33,9 +31,17 @@
             android:name=".Details"
             android:label="@string/title_activity_details"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Stages"
+        <activity
+            android:name=".Stages"
+            android:label="Select Stages" />
+        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.Dark" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-            android:label="Select Stages"></activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+
+        <activity android:name=".SignupActivity" android:theme="@style/AppTheme.Dark"></activity>
     </application>
 
 </manifest>

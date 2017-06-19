@@ -102,4 +102,5 @@
          "\nStep 3. Once you reach that location you will get an in-app notification to take the quiz. Answer 80% of the questions correctly to proceed to the next round."
         "\nGood luck!"
     "\nNote: Inorder to play this game you need to keep your GPS location enabled."</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
