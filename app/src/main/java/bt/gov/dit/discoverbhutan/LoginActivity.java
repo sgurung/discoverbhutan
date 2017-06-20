@@ -149,10 +149,10 @@ public class LoginActivity extends AppCompatActivity {
         return valid;
     }
 
-    class AuthPlayer extends AsyncTask<String, String, String> {
+    class AuthPlayer extends AsyncTask<String, String, Integer> {
 
         private String email, password;
-        private String success;
+        private Integer success;
         AuthPlayer(String email, String password){
 
             this.email=email;
@@ -171,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         @Override
-        protected String doInBackground(String... args) {
+        protected Integer doInBackground(String... args) {
 
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("email", email));
@@ -183,12 +183,11 @@ public class LoginActivity extends AppCompatActivity {
             Log.d("Create Response", json.toString());
 
             try {
-                success = json.getString(TAG_SUCCESS);
+                success = json.getInt(TAG_SUCCESS);
 
-                if (success == "1") {
+                if (success==1) {
                     // successfully created product
-                    //Toast.makeText(getApplicationContext(), "Success",Toast.LENGTH_SHORT).show();
-                    Log.d("Success","Success");
+
                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(i);
 
@@ -206,12 +205,12 @@ public class LoginActivity extends AppCompatActivity {
             return success;
 
         }
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(Integer result) {
             // dismiss the dialog once done
             progressDialog.dismiss();
-            if(result=="1"){
+            if(result==1){
                 Toast.makeText(getApplicationContext(), "Successful login",Toast.LENGTH_SHORT).show();
-            } else if(result=="2"){
+            } else if(result==2){
 
             } else {
                 Toast.makeText(getApplicationContext(), "Error login",Toast.LENGTH_SHORT).show();
