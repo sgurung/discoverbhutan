@@ -1,24 +1,37 @@
 package bt.gov.dit.discoverbhutan;
 
 import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import android.content.Intent;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.ButterKnife;
 import butterknife.BindView;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
+    private static final String TAG_SUCCESS = "success";
+    private ProgressDialog progressDialog;
     private static final int REQUEST_SIGNUP = 0;
-
+    JSONParser jsonParser = new JSONParser();
+    public final static String URL_AUTH_PLAYER = "http://172.16.16.150/discoverbhutan/index.php/Api/checkUser";
 
 
 
@@ -62,28 +75,25 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        _loginButton.setEnabled(false);
+        //_loginButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme_Dark_Dialog);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
-        progressDialog.show();
 
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
-
+        new AuthPlayer(email,password).execute();
         // TODO: Implement your own authentication logic here.
 
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);
+//        new android.os.Handler().postDelayed(
+//                new Runnable() {
+//                    public void run() {
+//                        // On complete call either onLoginSuccess or onLoginFailed
+//                        onLoginSuccess();
+//                        // onLoginFailed();
+//                        progressDialog.dismiss();
+//                    }
+//                }, 3000);
+
+
     }
 
 
@@ -137,5 +147,75 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+
+    class AuthPlayer extends AsyncTask<String, String, String> {
+
+        private String email, password;
+        private String success;
+        AuthPlayer(String email, String password){
+
+            this.email=email;
+            this.password=password;
+
+        }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+             progressDialog = new ProgressDialog(LoginActivity.this,
+                    R.style.AppTheme_Dark_Dialog);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setMessage("Authenticating...");
+            progressDialog.show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... args) {
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("email", email));
+            params.add(new BasicNameValuePair("password", password));
+
+            JSONObject json = jsonParser.makeHttpRequest(URL_AUTH_PLAYER,
+                    "POST", params);
+
+            Log.d("Create Response", json.toString());
+
+            try {
+                success = json.getString(TAG_SUCCESS);
+
+                if (success == "1") {
+                    // successfully created product
+                    //Toast.makeText(getApplicationContext(), "Success",Toast.LENGTH_SHORT).show();
+                    Log.d("Success","Success");
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(i);
+
+                    // closing this screen
+                    finish();
+                } else {
+
+                    Log.d("Failed","FAiled+success="+success);
+                    // failed to create product
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            return success;
+
+        }
+        protected void onPostExecute(String result) {
+            // dismiss the dialog once done
+            progressDialog.dismiss();
+            if(result=="1"){
+                Toast.makeText(getApplicationContext(), "Successful login",Toast.LENGTH_SHORT).show();
+            } else if(result=="2"){
+
+            } else {
+                Toast.makeText(getApplicationContext(), "Error login",Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
