@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import bt.gov.dit.discoverbhutan.Constants.*;
 import butterknife.ButterKnife;
 import butterknife.BindView;
 
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private static final int REQUEST_SIGNUP = 0;
     JSONParser jsonParser = new JSONParser();
-    public final static String URL_AUTH_PLAYER = "http://172.16.16.150/discoverbhutan/index.php/Api/checkUser";
+
 
 
 
@@ -177,7 +177,7 @@ public class LoginActivity extends AppCompatActivity {
             params.add(new BasicNameValuePair("email", email));
             params.add(new BasicNameValuePair("password", password));
 
-            JSONObject json = jsonParser.makeHttpRequest(URL_AUTH_PLAYER,
+            JSONObject json = jsonParser.makeHttpRequest(Constants.URL_AUTH_PLAYER,
                     "POST", params);
 
             Log.d("Create Response", json.toString());
