@@ -26,6 +26,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.directions.route.Route;
+import com.directions.route.RouteException;
+import com.directions.route.RoutingListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
@@ -46,6 +49,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import bt.gov.dit.discoverbhutan.places.Place;
@@ -53,7 +57,7 @@ import bt.gov.dit.discoverbhutan.places.PlacesPopulater;
 
 import static android.content.ContentValues.TAG;
 
-public class StageOne extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
+public class StageOne extends AppCompatActivity implements RoutingListener, GoogleApiClient.ConnectionCallbacks,
                             GoogleApiClient.OnConnectionFailedListener,
         LocationListener, OnMapReadyCallback, GoogleMap.OnMapClickListener,
         GoogleMap.OnMarkerClickListener,
@@ -489,6 +493,28 @@ public class StageOne extends AppCompatActivity implements GoogleApiClient.Conne
         }
 
     }
+
+    @Override
+    public void onRoutingFailure(RouteException e) {
+        
+
+    }
+
+    @Override
+    public void onRoutingStart() {
+
+    }
+
+    @Override
+    public void onRoutingSuccess(ArrayList<Route> arrayList, int i) {
+
+    }
+
+    @Override
+    public void onRoutingCancelled() {
+
+    }
+
     class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
 
