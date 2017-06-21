@@ -1,6 +1,7 @@
 package bt.gov.dit.discoverbhutan;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,11 +29,13 @@ import butterknife.BindView;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final String TAG_SUCCESS = "success";
+    private static final String TAG_USERNAME = "username";
     private ProgressDialog progressDialog;
+    private String username;
     private static final int REQUEST_SIGNUP = 0;
     JSONParser jsonParser = new JSONParser();
 
-
+    SharedPreferences userprofile;
 
 
     @BindView(R.id.input_email) EditText _emailText;
@@ -187,7 +190,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (success==1) {
                     // successfully created product
+                    username=json.getString(TAG_USERNAME);
+                    userprofile = getSharedPreferences(getString(R.string.app_name),MODE_PRIVATE);
+                    SharedPreferences.Editor editor = userprofile.edit();
 
+                    editor.putBoolean("LoggedIn",true);
+                    editor.putString("username",username);
                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(i);
 
@@ -209,7 +217,7 @@ public class LoginActivity extends AppCompatActivity {
             // dismiss the dialog once done
             progressDialog.dismiss();
             if(result==1){
-                Toast.makeText(getApplicationContext(), "Successful login",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Successful login\n"+"Welcome "+username,Toast.LENGTH_SHORT).show();
             } else if(result==2){
 
             } else {

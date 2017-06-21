@@ -6,9 +6,9 @@ package bt.gov.dit.discoverbhutan;
 
 public class Constants {
 
-    public static final String SERVER="http://172.16.16.150/";
+    public static final String SERVER="http://192.168.43.244/";
     //public static final String URL_AUTH_PLAYER = SERVER+"discoverbhutan/index.php/Api/checkUser";
-    public static final String URL_AUTH_PLAYER = "http://172.16.16.150/discoverbhutan/index.php/Api/checkUser";
+    public static final String URL_AUTH_PLAYER = SERVER+"discoverbhutan/index.php/Api/checkUser";
     public static final String URL_SIGNUP_PLAYER=SERVER+"discoverbhutan/index.php/Api/signupUser";
 
 }
