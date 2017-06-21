@@ -25,7 +25,10 @@
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+
+            android:layout_margin="12dp"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="3dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -36,58 +39,44 @@
 
                 <LinearLayout
                     android:id="@+id/location_bar"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:background="@drawable/buddha"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
-                    android:gravity="left"
+                    android:gravity="center"
                     >
 
 
                     <TextView
 
-                        android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="10dp"
-
-                        android:shadowColor="#68858c"
-                        android:text="Location Mode"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="4dp"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/play_location"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        app:layout_anchor="@id/location_bar"
-                        app:layout_anchorGravity="right"
-                        android:layout_marginTop="75dp"
-                        android:layout_marginRight="10dp"
-                        android:clickable="true"
-                        android:text="Play"
-                        app:backgroundTint="@color/primary_dark"
-                        android:textColor="#ffffff"
-                        app:srcCompat="@android:drawable/ic_media_play"
-                        app:fabSize="mini"
+                        android:text="Location\n Mode"
+                        android:textStyle="bold"
+                        android:shadowColor="#68858c"
+                        android:shadowRadius="5"
+                        android:shadowDy="5"
                         />
-
                 </LinearLayout>
-                <!--<TextView-->
-                    <!--android:id="@+id/location"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/title"-->
-                    <!--android:paddingTop="10dp"-->
-                    <!--android:paddingBottom="12dp"-->
-                    <!--android:paddingLeft="12dp"-->
-                    <!--android:paddingRight="12dp"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                    <!--android:textStyle="italic"/>-->
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textSize="15sp"
+                    android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"
+                    android:textStyle="italic"/>
 
 
             </LinearLayout>
@@ -99,8 +88,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
+            android:layout_margin="12dp"
             android:elevation="3dp"
-            >
+            card_view:cardCornerRadius="3dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -139,18 +129,18 @@
                         android:shadowDy="5"
                         />
                 </LinearLayout>
-                <!--<TextView-->
-                    <!--android:id="@+id/event"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/title"-->
-                    <!--android:paddingTop="10dp"-->
-                    <!--android:paddingBottom="12dp"-->
-                    <!--android:paddingLeft="12dp"-->
-                    <!--android:paddingRight="12dp"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                    <!--android:textStyle="italic"/>-->
+                <TextView
+                    android:id="@+id/event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textSize="15sp"
+                    android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"
+                    android:textStyle="italic"/>
 
 
 
@@ -165,8 +155,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+        android:layout_margin="12dp"
         android:elevation="3dp"
-        >
+        card_view:cardCornerRadius="3dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -205,19 +196,19 @@
                     android:shadowDy="5"
                     />
             </LinearLayout>
-            <!--<TextView-->
-                <!--android:id="@+id/free"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_below="@id/title"-->
-                <!--android:paddingTop="10dp"-->
-                <!--android:paddingBottom="12dp"-->
-                <!--android:paddingLeft="12dp"-->
-                <!--android:paddingRight="12dp"-->
-                <!--android:textSize="15sp"-->
-                <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                <!--android:textStyle="italic"-->
-                <!--/>-->
+            <TextView
+                android:id="@+id/free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"
+                android:textStyle="italic"
+                />
 
 
 
@@ -228,21 +219,21 @@
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
-    <!--<Button-->
-        <!--android:id="@+id/play_location"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--app:layout_anchor="@id/location_bar"-->
-        <!--app:layout_anchorGravity="right"-->
-        <!--android:layout_marginTop="75dp"-->
-        <!--android:layout_marginRight="10dp"-->
-        <!--android:clickable="true"-->
-        <!--android:text="Play\nLocation Mode"-->
-        <!--app:backgroundTint="@color/primary_dark"-->
-        <!--android:textColor="#ffffff"-->
-        <!--app:srcCompat="@android:drawable/ic_media_play"-->
-        <!--app:fabSize="mini"-->
-        <!--/>-->
+    <Button
+        android:id="@+id/play_location"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/location_bar"
+        app:layout_anchorGravity="center|end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="Play\nLocation Mode"
+        app:backgroundTint="@color/primary_dark"
+        android:textColor="#ffffff"
+        app:srcCompat="@android:drawable/ic_media_play"
+        app:fabSize="mini"
+        />
     <Button
         android:id="@+id/play_event"
         android:layout_height="wrap_content"
