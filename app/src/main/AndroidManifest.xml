@@ -36,12 +36,12 @@
             android:label="Select Stages" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.Dark">
+            android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="stateVisible|adjustPan">
 
         </activity>
         <activity
             android:name=".SignupActivity"
-            android:theme="@style/AppTheme.Dark" />
+            android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="stateVisible|adjustPan"/>
         <activity android:name=".SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
