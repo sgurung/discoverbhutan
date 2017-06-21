@@ -1,51 +1,67 @@
 package bt.gov.dit.discoverbhutan;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.app.Activity;
+        import android.content.Intent;
+        import android.graphics.PixelFormat;
+        import android.os.Bundle;
+        import android.view.Window;
+        import android.view.animation.Animation;
+        import android.view.animation.AnimationUtils;
+        import android.widget.ImageView;
+        import android.widget.LinearLayout;
 
-public class SplashActivity extends AppCompatActivity {
-
-    Boolean loggedIn;
-    private static int SPLASH_TIME_OUT = 1000;
+public class SplashActivity extends Activity {
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Window window = getWindow();
+        window.setFormat(PixelFormat.RGBA_8888);
+    }
+    /** Called when the activity is first created. */
+    Thread splashTread;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        StartAnimations();
+    }
+    private void StartAnimations() {
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        anim.reset();
+        LinearLayout l=(LinearLayout) findViewById(R.id.lin_lay);
+        l.clearAnimation();
+        l.startAnimation(anim);
 
-        SharedPreferences userprofile = this.getSharedPreferences(getString(R.string.app_name),MODE_PRIVATE);
-        loggedIn=userprofile.getBoolean("LoggedIn", false);
-        new Handler().postDelayed(new Runnable() {
+        anim = AnimationUtils.loadAnimation(this, R.anim.translate);
+        anim.reset();
+        ImageView iv = (ImageView) findViewById(R.id.splash);
+        iv.clearAnimation();
+        iv.startAnimation(anim);
 
-            /*
-             * Showing splash screen with a timer. This will be useful when you
-             * want to show case your app logo / company
-             */
-
+        splashTread = new Thread() {
             @Override
             public void run() {
-                // This method will be executed once the timer is over
-                // Start your app main activity
-
-                Intent i;
-                if(loggedIn==true) {
-
-
-                    i = new Intent(SplashActivity.this, MainActivity.class);
-
-
-
-                    finish();
-                } else {
-                    i = new Intent(SplashActivity.this, LoginActivity.class);
+                try {
+                    int waited = 0;
+                    // Splash screen pause time
+                    while (waited < 6000) {
+                        sleep(100);
+                        waited += 100;
+                    }
+                    Intent intent = new Intent(SplashActivity.this,
+                            MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    SplashActivity.this.finish();
+                } catch (InterruptedException e) {
+                    // do nothing
+                } finally {
+                    SplashActivity.this.finish();
                 }
-                startActivity(i);
-                finish();
+
             }
-        }, SPLASH_TIME_OUT);
+        };
+        splashTread.start();
+
     }
 
 }

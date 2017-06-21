@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="bt.gov.dit.discoverbhutan.SplashActivity">
-<TextView
+
+    android:id="@+id/lin_lay"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Splash Screen"/>
-</android.support.constraint.ConstraintLayout>
+    android:layout_gravity="center"
+    android:background="@drawable/splash_img"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="bt.gov.dit.discoverbhutan.SplashActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="232dp"
+        android:layout_height="130dp"
+        android:layout_weight="0.11"
+        android:background="@drawable/splash_logo" />
+
+</LinearLayout>
