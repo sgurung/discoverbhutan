@@ -496,7 +496,7 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
 
     @Override
     public void onRoutingFailure(RouteException e) {
-        
+
 
     }
 

@@ -21,7 +21,8 @@
         </activity>
         <activity
             android:name=".StageOne"
-            android:label="Stage One" />
+            android:label="Stage One"
+            android:theme="@style/AppTheme.Dark"/>
 
         <service
             android:name=".GeofenceTransitionService"
