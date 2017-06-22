@@ -103,7 +103,7 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
                 Intent intent = new Intent(getApplication(), Details.class);
 
                 startActivity(intent);
-                overridePendingTransition(R.animator.right_to_left, R.animator.left_to_right);
+                overridePendingTransition(R.animator.push_left_in, R.animator.push_left_out);
             }
         });
 
