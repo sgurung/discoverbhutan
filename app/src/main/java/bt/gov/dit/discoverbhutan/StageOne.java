@@ -258,8 +258,8 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
     private LocationRequest locationRequest;
     // Defined in mili seconds.
     // This number in extremely low, and should be used only for debug
-    private final int UPDATE_INTERVAL =  5*60*1000;
-    private final int FASTEST_INTERVAL = 30*1000;
+    private final int UPDATE_INTERVAL =  5*1000;
+    private final int FASTEST_INTERVAL = 3*1000;
 
     // Start location Updates
     private void startLocationUpdates(){
@@ -277,6 +277,7 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
         Log.d(TAG, "getLastKnownLocation()");
         if ( checkPermission() ) {
             if(isLocationEnabled(this)){
+
                 lastLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
                 if ( lastLocation != null ) {
                     Log.i(TAG, "LasKnown location. " +
@@ -364,7 +365,7 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
 
     private static final long GEO_DURATION = 60 * 60 * 1000;
     private static final String GEOFENCE_REQ_ID = "My Geofence";
-    private static final float GEOFENCE_RADIUS = 200.0f; // in meters
+    private static final float GEOFENCE_RADIUS = 300.0f; // in meters
 
     // Create a Geofence
     private Geofence createGeofence( LatLng latLng, float radius , String id) {
