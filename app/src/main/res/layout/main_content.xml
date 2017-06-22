@@ -20,20 +20,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
         <android.support.v7.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-
-
                 <LinearLayout
                     android:id="@+id/location_bar"
                     android:orientation="horizontal"
@@ -43,22 +39,17 @@
                     android:layout_centerInParent="true"
                     android:gravity="left"
                     >
-
-
                     <TextView
-
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="80dp"
                         android:layout_marginLeft="10dp"
-
                         android:shadowColor="#68858c"
-                        android:text="Location Mode"
+                        android:text="LOCATION MODE"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
                         android:textStyle="bold" />
-
                     <Button
                         android:id="@+id/play_location"
                         android:layout_height="wrap_content"
@@ -66,30 +57,15 @@
                         app:layout_anchor="@id/location_bar"
                         app:layout_anchorGravity="right"
                         android:layout_marginTop="75dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18sp"
                         android:clickable="true"
                         android:text="Play"
                         app:backgroundTint="@color/primary_dark"
                         android:textColor="#ffffff"
                         app:srcCompat="@android:drawable/ic_media_play"
-                        app:fabSize="mini"
                         />
-
                 </LinearLayout>
-                <!--<TextView-->
-                    <!--android:id="@+id/location"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/title"-->
-                    <!--android:paddingTop="10dp"-->
-                    <!--android:paddingBottom="12dp"-->
-                    <!--android:paddingLeft="12dp"-->
-                    <!--android:paddingRight="12dp"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                    <!--android:textStyle="italic"/>-->
-
-
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -98,178 +74,101 @@
             android:id="@+id/card_viewone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            android:elevation="3dp"
             >
-
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-
-
                 <LinearLayout
-
                     android:id="@+id/eventbar"
-                    android:orientation="vertical"
-                    android:background="@drawable/event"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
-                    android:gravity="center"
-                    >
-
-
+                    android:background="@drawable/event"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="80dp"
+                        android:shadowColor="#68858c"
+                        android:text="EVENT MODE"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
-                        android:text="Event\n Mode"
-                        android:textStyle="bold"
-
-                        android:shadowColor="#68858c"
-                        android:shadowRadius="5"
-                        android:shadowDy="5"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/play_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="65dp"
+                        android:clickable="true"
+                        android:text="Play"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/primary_dark"
+                        app:layout_anchor="@id/eventbar"
+                        app:layout_anchorGravity="right"
+                        app:srcCompat="@android:drawable/ic_media_play"
                         />
                 </LinearLayout>
-                <!--<TextView-->
-                    <!--android:id="@+id/event"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/title"-->
-                    <!--android:paddingTop="10dp"-->
-                    <!--android:paddingBottom="12dp"-->
-                    <!--android:paddingLeft="12dp"-->
-                    <!--android:paddingRight="12dp"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                    <!--android:textStyle="italic"/>-->
-
-
-
-
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
-
-
     <android.support.v7.widget.CardView
         android:id="@+id/card_v"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:elevation="3dp"
         >
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
-
             <LinearLayout
-
                 android:id="@+id/freebar"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:background="@drawable/free"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
-                android:gravity="center"
+                android:gravity="left"
                 >
-
-
                 <TextView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="4dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="10dp"
                     android:textColor="#ffffff"
                     android:textSize="30sp"
-                    android:text="Free\n Mode"
+                    android:text="FREE MODE"
                     android:textStyle="bold"
-
                     android:shadowColor="#68858c"
-                    android:shadowRadius="5"
-                    android:shadowDy="5"
+                    />
+                <Button
+                    android:id="@+id/play_free"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:layout_anchor="@id/freebar"
+                    app:layout_anchorGravity="right"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="90dp"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_media_play"
+                    android:text="Play"
+                    android:textColor="#ffffff"
+                    app:backgroundTint="@color/primary_dark"
                     />
             </LinearLayout>
-            <!--<TextView-->
-                <!--android:id="@+id/free"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_below="@id/title"-->
-                <!--android:paddingTop="10dp"-->
-                <!--android:paddingBottom="12dp"-->
-                <!--android:paddingLeft="12dp"-->
-                <!--android:paddingRight="12dp"-->
-                <!--android:textSize="15sp"-->
-                <!--android:text="Visit, explore and discover the historic places in Bhutan and answer the questions to go to the next round!"-->
-                <!--android:textStyle="italic"-->
-                <!--/>-->
-
-
-
-
         </LinearLayout>
-
     </android.support.v7.widget.CardView>
     </LinearLayout>
-
 </android.support.v4.widget.NestedScrollView>
-    <!--<Button-->
-        <!--android:id="@+id/play_location"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--app:layout_anchor="@id/location_bar"-->
-        <!--app:layout_anchorGravity="right"-->
-        <!--android:layout_marginTop="75dp"-->
-        <!--android:layout_marginRight="10dp"-->
-        <!--android:clickable="true"-->
-        <!--android:text="Play\nLocation Mode"-->
-        <!--app:backgroundTint="@color/primary_dark"-->
-        <!--android:textColor="#ffffff"-->
-        <!--app:srcCompat="@android:drawable/ic_media_play"-->
-        <!--app:fabSize="mini"-->
-        <!--/>-->
-    <Button
-        android:id="@+id/play_event"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_anchor="@id/eventbar"
-        app:layout_anchorGravity="left|bottom"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:text="Play\nEvent Mode"
-        android:textColor="#ffffff"
-        app:srcCompat="@android:drawable/ic_media_play"
-        app:backgroundTint="@color/primary_dark"
-        app:fabSize="mini"/>
-    <Button
-        android:id="@+id/play_free"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_anchor="@id/freebar"
-        app:layout_anchorGravity="center|bottom"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_media_play"
-        android:text="Play\nFree Mode"
-        android:textColor="#ffffff"
-        app:backgroundTint="@color/primary_dark"
-        app:fabSize="mini"/>
     </android.support.design.widget.CoordinatorLayout>
 
