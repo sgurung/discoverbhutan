@@ -45,7 +45,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="80dp"
                         android:layout_marginLeft="10dp"
-                        android:shadowColor="#68858c"
+                        android:shadowColor="#000000"
+                        android:shadowRadius="5"
+                        android:shadowDy="5"
                         android:text="LOCATION MODE"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
@@ -94,7 +96,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="80dp"
-                        android:shadowColor="#68858c"
+                        android:shadowColor="#000000"
+                        android:shadowRadius="5"
+                        android:shadowDy="5"
                         android:text="EVENT MODE"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
@@ -148,7 +152,9 @@
                     android:textSize="30sp"
                     android:text="FREE MODE"
                     android:textStyle="bold"
-                    android:shadowColor="#68858c"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
                     />
                 <Button
                     android:id="@+id/play_free"
@@ -163,6 +169,7 @@
                     app:srcCompat="@android:drawable/ic_media_play"
                     android:text="Play"
                     android:textColor="#ffffff"
+
                     app:backgroundTint="@color/primary_dark"
                     />
             </LinearLayout>
