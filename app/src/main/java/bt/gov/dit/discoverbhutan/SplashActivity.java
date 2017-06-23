@@ -2,7 +2,8 @@ package bt.gov.dit.discoverbhutan;
 
 import android.app.Activity;
         import android.content.Intent;
-        import android.graphics.PixelFormat;
+import android.content.SharedPreferences;
+import android.graphics.PixelFormat;
         import android.os.Bundle;
         import android.view.Window;
         import android.view.animation.Animation;
@@ -11,6 +12,7 @@ import android.app.Activity;
         import android.widget.LinearLayout;
 
 public class SplashActivity extends Activity {
+    Boolean loggedIn;
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         Window window = getWindow();
@@ -22,6 +24,8 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        SharedPreferences userprofile = this.getSharedPreferences(getString(R.string.app_name),MODE_PRIVATE);
+        loggedIn=userprofile.getBoolean("LoggedIn", false);
         StartAnimations();
     }
     private void StartAnimations() {
@@ -47,17 +51,21 @@ public class SplashActivity extends Activity {
                         sleep(100);
                         waited += 100;
                     }
-                    Intent intent = new Intent(SplashActivity.this,
-                            MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
+                    Intent i;
+                    if(loggedIn==true) {
+                        i = new Intent(SplashActivity.this, MainActivity.class);
+                        finish();
+                    } else {
+                        i = new Intent(SplashActivity.this, LoginActivity.class);
+                    }
+                    i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(i);
                     SplashActivity.this.finish();
                 } catch (InterruptedException e) {
                     // do nothing
                 } finally {
                     SplashActivity.this.finish();
                 }
-
             }
         };
         splashTread.start();
