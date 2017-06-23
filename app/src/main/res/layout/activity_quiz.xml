@@ -101,7 +101,7 @@ tools:context="bt.gov.dit.discoverbhutan.QuizActivity">
     android:textColor="#6C7A89"
     android:padding="8dp"
     android:layout_marginBottom="10dp"
-    android:id="@+id/quit"/>
+    android:id="@+id/choice4"/>
 </LinearLayout>
 
 </LinearLayout>

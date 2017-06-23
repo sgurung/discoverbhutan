@@ -82,7 +82,7 @@ public class GeofenceTransitionService extends IntentService {
 //                getApplicationContext(), msg
 //        );
 
-        Intent notificationIntent = new Intent(getApplicationContext(), QuizActivity.class);
+        Intent notificationIntent = new Intent(getApplicationContext(), FetchQuestion.class);
 
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP);

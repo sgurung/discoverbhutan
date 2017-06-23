@@ -19,7 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:label="Choose Game Mode"
-            android:theme="@style/AppTheme.Dark"></activity>
+            android:theme="@style/AppTheme.Dark" />
         <activity
             android:name=".StageOne"
             android:label="Stage One"
@@ -39,7 +39,7 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.Dark"
-            android:windowSoftInputMode="stateVisible|adjustPan"></activity>
+            android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity
             android:name=".SignupActivity"
             android:theme="@style/AppTheme.Dark"
@@ -55,7 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".FetchQuestion"></activity>
     </application>
 
 </manifest>
