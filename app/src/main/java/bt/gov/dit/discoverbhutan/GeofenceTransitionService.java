@@ -78,15 +78,19 @@ public class GeofenceTransitionService extends IntentService {
         Log.i(TAG, "sendNotification: " + msg );
 
         // Intent to start the main Activity
-        Intent notificationIntent = StageOne.makeNotificationIntent(
-                getApplicationContext(), msg
-        );
+//        Intent notificationIntent = StageOne.makeNotificationIntent(
+//                getApplicationContext(), msg
+//        );
 
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(LoginActivity.class);
-        stackBuilder.addNextIntent(notificationIntent);
-        PendingIntent notificationPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent notificationIntent = new Intent(getApplicationContext(), QuizActivity.class);
 
+        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+//        stackBuilder.addParentStack(QuizActivity.class);
+//        stackBuilder.addNextIntent(notificationIntent);
+        //PendingIntent notificationPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent notificationPendingIntent = PendingIntent.getActivity(getApplicationContext(),0,notificationIntent,0);
 
         // Creating and sending Notification
         NotificationManager notificatioMng =
@@ -104,7 +108,7 @@ public class GeofenceTransitionService extends IntentService {
                 .setSmallIcon(R.drawable.ic_action_location)
                 .setColor(Color.RED)
                 .setContentTitle(msg)
-                .setContentText("Geofence Notification!")
+                .setContentText("Take up the Quiz now!")
                 .setContentIntent(notificationPendingIntent)
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setAutoCancel(true);
