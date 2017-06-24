@@ -16,6 +16,8 @@
     <!--<color name="primary_darker">#CC1D1D</color>-->
     <!--<color name="accent">#FFFFFF</color>-->
 
-
     <color name="iron">#CCCCCC</color>
+    <color name="text_title">#CC000000</color>
+    <color name="text_secondary">#8C000000</color>
+    <color name="light_blue">#03a9f4</color>
 </resources>
