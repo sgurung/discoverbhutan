@@ -41,13 +41,13 @@ public class QuizActivity extends AppCompatActivity {
         updateQuestion();
 
 
-        //Start of Button Listener for Button1
+
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
+
                 Log.d("Create Response", "Correctanswer:"+mAnswer+"your selection:"+mButtonChoice1.getText());
-                if (mButtonChoice1.getText().toString()==mAnswer){
+                if (mButtonChoice1.getText().toString().equals(mAnswer)){
 
                     mScore = mScore + 1;
                     updateScore(mScore);
@@ -68,7 +68,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view){
                 Log.d("Create Response", "Correctanswer:"+mAnswer+"your selection:"+mButtonChoice2.getText());
 
-                if (mButtonChoice2.getText().toString() == mAnswer){
+                if (mButtonChoice2.getText().toString().equals(mAnswer)){
 
                     mScore = mScore + 1;
                     updateScore(mScore);
@@ -89,7 +89,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 Log.d("Create Response", "Correctanswer:"+mAnswer+"your selection:"+mButtonChoice3.getText());
-                if (mButtonChoice3.getText().toString() == mAnswer){
+                if (mButtonChoice3.getText().toString().equals(mAnswer)){
 
                     mScore = mScore + 1;
                     updateScore(mScore);
@@ -109,7 +109,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 Log.d("Create Response", "Correctanswer:"+mAnswer+"your selection:"+mButtonChoice4.getText());
-                if (mButtonChoice4.getText().toString() == mAnswer){
+                if (mButtonChoice4.getText().toString().equals(mAnswer)){
                     mScore = mScore + 1;
                     updateScore(mScore);
                     updateQuestion();
