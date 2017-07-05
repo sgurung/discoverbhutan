@@ -23,7 +23,7 @@ public class PlacesPopulater {
 
         changlimithang = new Place(new LatLng(27.471573,89.64098), "Changlimithang","Changlimithang Stadium", mChanglimithang );
        //takinzoo = new Place(new LatLng(27.481801,89.613657), "Motithang Takin Preserve", "Click here more info", mTakinzoo);
-        takinzoo = new Place(new LatLng(27.414017, 89.656681), "Motithang Takin Preserve", "Click here more info", mTakinzoo);
+        takinzoo = new Place(new LatLng(27.475495, 89.636206), "Motithang Takin Preserve", "Click here more info", mTakinzoo);
 
         memorialchorten = new Place(new LatLng(27.466588,89.637888), "Memorial Chorten", "Memorial Chorten", mMemorialchorten);
         tashichhodzong = new Place(new LatLng(27.48943,89.63502),"Tashichhodzong", "Tashichhodzong",mTashichhodzong);

@@ -365,7 +365,7 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
 
     private static final long GEO_DURATION = 60 * 60 * 1000;
     private static final String GEOFENCE_REQ_ID = "My Geofence";
-    private static final float GEOFENCE_RADIUS = 300.0f; // in meters
+    private static final float GEOFENCE_RADIUS = 900.0f; // in meters
 
     // Create a Geofence
     private Geofence createGeofence( LatLng latLng, float radius , String id) {

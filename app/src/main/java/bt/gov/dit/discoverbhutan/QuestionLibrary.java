@@ -16,7 +16,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class QuestionLibrary {
 
-    JSONParser jsonParser;
+
     private JSONObject jsonObject;
     private String questionString;
     private String optionOne,optionTwo,optionThree,optionFour,answer;

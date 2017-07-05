@@ -38,9 +38,9 @@
 
 
                 <LinearLayout
-                    android:id="@+id/location_bar"
+                    android:id="@+id/stage1image"
                     android:orientation="vertical"
-                    android:background="@drawable/takinlargeactive"
+                    android:background="@drawable/stageoneactive"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
@@ -66,7 +66,7 @@
                         />
                 </LinearLayout>
                 <TextView
-                    android:id="@+id/location"
+                    android:id="@+id/stage1text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title"
@@ -75,82 +75,16 @@
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
                     android:textSize="15sp"
-                    android:text="Play Takin preserve center."
+                    android:text="Lungtenzampa bridge."
                     android:textStyle="italic"/>
 
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_viewone"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_margin="12dp"
-            android:elevation="3dp"
-            card_view:cardCornerRadius="3dp">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-
-                <LinearLayout
-
-                    android:id="@+id/eventbar"
-                    android:orientation="vertical"
-                    android:background="@drawable/clocktowerlargegrey"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    >
-
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="4dp"
-                        android:textColor="#ffffff"
-                        android:textSize="30sp"
-                        android:text="Stage 2"
-                        android:textStyle="bold"
-                        android:shadowColor="#000000"
-                        android:shadowRadius="5"
-                        android:shadowDy="5"
-                        />
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/event"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="12dp"
-                    android:paddingLeft="12dp"
-                    android:paddingRight="12dp"
-                    android:textSize="15sp"
-                    android:text="Complete Stage 1 to unlock this stage"
-                    android:textStyle="italic"/>
-
-
-
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_viewtwo"
+        android:id="@+id/stage2card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -167,7 +101,72 @@
 
             <LinearLayout
 
-                android:id="@+id/freebar"
+                android:id="@+id/stage2image"
+                android:orientation="vertical"
+                android:background="@drawable/clocktowerlargegrey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 2"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage2text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 1 to unlock this stage"
+                android:textStyle="italic"/>
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage3card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage3image"
                 android:orientation="vertical"
                 android:background="@drawable/changlimithanglargegrey"
                 android:layout_width="wrap_content"
@@ -195,7 +194,7 @@
                     />
             </LinearLayout>
             <TextView
-                android:id="@+id/free"
+                android:id="@+id/stage3text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
@@ -210,8 +209,10 @@
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+
+
     <android.support.v7.widget.CardView
-        android:id="@+id/card_viewthree"
+        android:id="@+id/stage4card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -228,9 +229,9 @@
 
             <LinearLayout
 
-                android:id="@+id/stage4bar"
+                android:id="@+id/stage4image"
                 android:orientation="vertical"
-                android:background="@drawable/buddhalargegrey"
+                android:background="@drawable/stage4grey"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
@@ -266,6 +267,388 @@
                 android:paddingRight="12dp"
                 android:textSize="15sp"
                 android:text="Complete Stage 3 to unlock this stage"
+                android:textStyle="italic"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage5card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage5image"
+                android:orientation="vertical"
+                android:background="@drawable/stage5grey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 5"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage5text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 4 to unlock this stage"
+                android:textStyle="italic"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage6card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage6image"
+                android:orientation="vertical"
+                android:background="@drawable/stage6grey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 6"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage6text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 5 to unlock this stage"
+                android:textStyle="italic"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage7card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/stage7image"
+                android:orientation="vertical"
+                android:background="@drawable/takinlargeagrey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 7"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage7text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Play Takin preserve center."
+                android:textStyle="italic"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage8card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage8image"
+                android:orientation="vertical"
+                android:background="@drawable/buddhalargegrey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 8"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage8text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 7 to unlock this stage"
+                android:textStyle="italic"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage9card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage9image"
+                android:orientation="vertical"
+                android:background="@drawable/stage9grey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 9"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage9text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 8 to unlock this stage"
+                android:textStyle="italic"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stage10card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="12dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+
+                android:id="@+id/stage10image"
+                android:orientation="vertical"
+                android:background="@drawable/stage10grey"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="Stage 10"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="5"
+                    android:shadowDy="5"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stage10text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textSize="15sp"
+                android:text="Complete Stage 9 to unlock this stage"
                 android:textStyle="italic"
                 />
 

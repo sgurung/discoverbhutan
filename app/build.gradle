@@ -20,6 +20,7 @@ android {
     }
 }
 
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -36,5 +37,8 @@ dependencies {
     compile 'com.jakewharton:butterknife-compiler:8.6.0'
     compile 'com.jakewharton:butterknife-annotations:8.6.0'
     compile 'com.github.jd-alexander:library:1.1.0'
+    compile 'com.android.support:support-compat:24.1.1'
+    compile 'com.daimajia.easing:library:2.0@aar'
+    compile 'com.daimajia.androidanimations:library:2.2@aar'
     testCompile 'junit:junit:4.12'
 }
