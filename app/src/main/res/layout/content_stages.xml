@@ -673,7 +673,7 @@
        android:elevation="3dp"
         android:text="Play"
         android:textColor="#ffffff"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="@color/colorPrimary"
         app:fabSize="mini"/>
 
     </android.support.design.widget.CoordinatorLayout>

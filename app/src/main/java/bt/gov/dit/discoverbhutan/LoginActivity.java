@@ -28,10 +28,15 @@ import butterknife.BindView;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
+    private static final String TAG_PLAYERID = "playerid";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_USERNAME = "username";
+    private static final String TAG_STAGE = "stage";
+    private static final String TAG_SCORE = "score";
     private ProgressDialog progressDialog;
     private String username;
+    private String playerid;
+    private String stage, stagestatus=null,score;
     private static final int REQUEST_SIGNUP = 0;
     JSONParser jsonParser = new JSONParser();
 
@@ -191,11 +196,19 @@ public class LoginActivity extends AppCompatActivity {
                 if (success==1) {
                     // successfully created product
                     username=json.getString(TAG_USERNAME);
+                    playerid=json.getString(TAG_PLAYERID);
+                    stage=json.getString(TAG_STAGE);
+                    score=json.getString(TAG_SCORE);
                     userprofile = getSharedPreferences(getString(R.string.app_name),MODE_PRIVATE);
                     SharedPreferences.Editor editor = userprofile.edit();
 
                     editor.putBoolean("LoggedIn",true);
+                    editor.putString("player_id",playerid);
                     editor.putString("username",username);
+                    editor.putString("stage",stage);
+                    editor.putString("score",score);
+                    editor.putString("stagestatus",stagestatus);
+
                     editor.commit();
                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(i);
@@ -218,7 +231,7 @@ public class LoginActivity extends AppCompatActivity {
             // dismiss the dialog once done
             progressDialog.dismiss();
             if(result==1){
-                Toast.makeText(getApplicationContext(), "Successful login\n"+"Welcome "+username,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Successful login\n"+"Welcome "+username+"Stage:"+stage+"score:"+score+"playerid:"+playerid,Toast.LENGTH_SHORT).show();
             } else if(result==2){
 
             } else {

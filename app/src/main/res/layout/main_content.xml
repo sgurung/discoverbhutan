@@ -63,7 +63,7 @@
                         android:textSize="18sp"
                         android:clickable="true"
                         android:text="Play"
-                        app:backgroundTint="@color/primary_dark"
+                        app:backgroundTint="@color/colorPrimary"
                         android:textColor="#ffffff"
                         app:srcCompat="@android:drawable/ic_media_play"
                         />
@@ -110,10 +110,10 @@
                         android:layout_marginTop="75dp"
                         android:layout_marginLeft="65dp"
                         android:clickable="true"
-                        android:text="Play"
+                        android:text="Coming Soon"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        app:backgroundTint="@color/primary_dark"
+                        app:backgroundTint="@color/text_secondary"
                         app:layout_anchor="@id/eventbar"
                         app:layout_anchorGravity="right"
                         app:srcCompat="@android:drawable/ic_media_play"
@@ -167,10 +167,10 @@
                     android:textSize="18sp"
                     android:clickable="true"
                     app:srcCompat="@android:drawable/ic_media_play"
-                    android:text="Play"
+                    android:text="Coming Soon"
                     android:textColor="#ffffff"
 
-                    app:backgroundTint="@color/primary_dark"
+                    app:backgroundTint="@color/text_secondary"
                     />
             </LinearLayout>
         </LinearLayout>

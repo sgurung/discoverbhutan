@@ -18,12 +18,15 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="Choose Game Mode"
-            android:theme="@style/AppTheme.Dark" />
+            android:label="Choose Game Mode" />
         <activity
             android:name=".StageOne"
             android:label="Stage One"
-            android:theme="@style/AppTheme.Dark" />
+            android:parentActivityName=".Stages">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bt.gov.dit.discoverbhutan.Stages" />
+        </activity>
 
         <service
             android:name=".GeofenceTransitionService"
@@ -35,7 +38,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Stages"
-            android:label="Select Stages" />
+            android:label="Select Stage"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bt.gov.dit.discoverbhutan.MainActivity" />
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.Dark"
@@ -58,12 +66,14 @@
         <activity
             android:name=".QuizActivity"
             android:theme="@style/AppTheme.Dark" />
-        <activity android:name=".FetchQuestion">
-
-
-        </activity>
-        <activity android:name=".ResultActivity"
-            android:theme="@style/AppTheme.Dark"></activity>
+        <activity android:name=".FetchQuestion"></activity>
+        <activity
+            android:name=".ResultActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppThemeMain.NoActionBar"></activity>
     </application>
 
 </manifest>

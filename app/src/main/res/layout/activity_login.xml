@@ -3,7 +3,7 @@
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:fitsSystemWindows="true"
-    android:background="@drawable/bg">
+    android:background="@color/colorPrimary">
 
 <LinearLayout
     android:orientation="vertical"
@@ -31,7 +31,9 @@ android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:hint="Email"
+            android:textColor="@color/white"/>
+
     </android.support.design.widget.TextInputLayout>
 
     <!--  Password Label -->
@@ -44,7 +46,8 @@ android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:textColor="@color/white"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
@@ -62,7 +65,8 @@ android:fitsSystemWindows="true"
         android:layout_marginBottom="24dp"
         android:text="No account yet? Create one"
         android:gravity="center"
-        android:textSize="16dip"/>
+        android:textSize="16dip"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
 </ScrollView>
