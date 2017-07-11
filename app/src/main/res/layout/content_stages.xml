@@ -40,7 +40,7 @@
                 <LinearLayout
                     android:id="@+id/stage1image"
                     android:orientation="vertical"
-                    android:background="@drawable/stageoneactive"
+                    android:background="@drawable/moicactive"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
@@ -75,7 +75,7 @@
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
                     android:textSize="15sp"
-                    android:text="Lungtenzampa bridge."
+                    android:text="Ministry of Information and Communications"
                     android:textStyle="italic"/>
 
 

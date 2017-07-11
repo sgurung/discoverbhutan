@@ -4,13 +4,10 @@ import android.app.IntentService;
 import android.content.Intent;
 
 
-import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
@@ -55,6 +52,7 @@ public class GeofenceTransitionService extends IntentService {
 
             // Send notification details as a String
             sendNotification( geofenceTransitionDetails );
+
         }
     }
 
@@ -105,7 +103,7 @@ public class GeofenceTransitionService extends IntentService {
     private Notification createNotification(String msg, PendingIntent notificationPendingIntent) {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this);
         notificationBuilder
-                .setSmallIcon(R.drawable.ic_action_location)
+                .setSmallIcon(R.drawable.ic_action_locationone)
                 .setColor(Color.RED)
                 .setContentTitle(msg)
                 .setContentText("Take up the Quiz now!")

@@ -41,6 +41,8 @@ public class ResultActivity extends AppCompatActivity {
     private static final String TAG_STAGE = "stage";
     private static final String TAG_SCORE = "score";
     private static final String TAG_USERNAME = "username";
+    private String playerid;
+    private String stage;
     private ProgressDialog progressDialog;
     JSONParser jsonParser = new JSONParser();
     String username;
@@ -72,7 +74,8 @@ public class ResultActivity extends AppCompatActivity {
         YoYo.with(Techniques.BounceIn).duration(4000).repeat(1).playOn(image);
 
         if(finalScore>7) {
-            UpdateScore.execute(playerid,stage,finalScore);
+
+            new UpdateScore(playerid,stage,finalScore).execute();
             if(finalScore==10){
                 drawable =getResources().getDrawable(R.drawable.bullseye);
                 messageString="Perfect Score";
@@ -143,13 +146,13 @@ public class ResultActivity extends AppCompatActivity {
 
     class UpdateScore extends AsyncTask<String, String, Integer> {
 
-        private String playerid, stage, score;
+        private String playerid, stage,score;
         private Integer success;
-        UpdateScore(String playerid, String stage, String score){
+        UpdateScore(String playerid, String stage, Integer score){
 
             this.playerid=playerid;
             this.stage=stage;
-            this.score=score;
+            this.score=score.toString();
 
 
         }
@@ -186,10 +189,13 @@ public class ResultActivity extends AppCompatActivity {
                     userprofile = getSharedPreferences(getString(R.string.app_name),MODE_PRIVATE);
                     SharedPreferences.Editor editor = userprofile.edit();
 
-                    editor.putInt("stagestatus",1);
+
                     playerid=json.getString(TAG_PLAYERID);
                     stage=json.getString(TAG_STAGE);
                     score=json.getString(TAG_SCORE);
+                    editor.putInt("stagestatus",1);
+                    editor.putString("stage",stage);
+                    editor.putString("score",score);
                     editor.commit();
                     Intent i = new Intent(getApplicationContext(), Stages.class);
                     startActivity(i);

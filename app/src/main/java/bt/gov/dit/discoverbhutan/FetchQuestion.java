@@ -27,7 +27,7 @@ public class FetchQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fetch_question);
 
-        new DownloadQuestion("2").execute();
+        new DownloadQuestion("0").execute();
 
 
 

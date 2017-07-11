@@ -80,7 +80,7 @@
                 <LinearLayout
                     android:id="@+id/location_bar"
                     android:orientation="vertical"
-                    android:background="@drawable/takinlargeactive"
+                    android:background="@drawable/moicactive"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
                     android:layout_centerInParent="true"
@@ -98,7 +98,7 @@
                         android:paddingTop="4dp"
                         android:textColor="#ffffff"
                         android:textSize="30sp"
-                        android:text="Motithang Takin Preserve"
+                        android:text="Ministry of Information \n and Communications"
                         android:textStyle="bold"
                         android:shadowColor="#68858c"
                         android:shadowRadius="5"

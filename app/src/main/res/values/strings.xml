@@ -6,7 +6,24 @@
     <string name="gps_network_not_enabled">Location is not enabled</string>
     <string name="open_location_settings">Open Location settings</string>
     <string name="Cancel">Cancel</string>
-    <string name="title_activity_details">Details</string>
+    <string name="title_activity_details">MoIC</string>
+    <string name="moic_details">Ministry of Information and Communication  is responsible for promoting the development of reliable and sustainable information, communications and transport networks and systems and facilitating the provision of affordable and easier access to associated services.
+The Ministry of information and communication is headed by the hon’ble lyonpo D N Dhungyel. His Excellency was appointed as the Minister for Information and communication on July 13,2013.
+Dasho Karma W Penjor, the former Secretary of Dratshang Lhentshog is appointed as the new Secretary for the Ministry of Information and Communication. He received the red scarf in April,2017.
+
+There are 5 Departments under Ministry of Information and communication.
+1.Department of Information Technology and Telecom
+2.Bhutan Civil Aviation Authority
+3.Department of Information and Media
+4.Department of Air Transport
+5.Road Safety and Transport Authority
+</string>
+    <string name="lungtenzampa_details">
+        The Modern Bridge that connects Yangchenphug to the main Thimphu town was built replacing old Lungten zampa Bridge said to be named by 13th Century Buddhist Saint Phajo Drugom Zhigpo. The Bridge that looks more of a bent flyover than a Bridge was named LUNGTEN ZAMPA taking the name of its original wooden bridge.
+Legend has it that Phajo Drugom Zhigpo was prophesized in his vision of meeting Khandro Sonam Peldon who will eventually help him in spreading the teachings of Buddha. As prophesized, they came across each other but each of them standing on opposite side of the Wangchu River. The wooden log bridge over the Wangchu were current bridge lies was said to be the first bridge they came across to meet with each other after traversing long way downstream through dense bushes and giant boulders, singing love songs to each other. Thus, bridge was named as Lungten Zampa (The Bridge of the Prophecy)
+Today, under the current bridge one can see wonderful impressions made by Phajo Drugom Zhigpo and his consort Khandro Sonam Peldon while playing on a rock in fulfillment of his prophesies.
+
+    </string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

@@ -25,7 +25,7 @@ public class QuestionLibrary {
     QuestionLibrary(Context c){
 
 
-        SharedPreferences sharedPref = c.getSharedPreferences("QuestionaireStage2",MODE_PRIVATE);
+        SharedPreferences sharedPref = c.getSharedPreferences("QuestionaireStage0",MODE_PRIVATE);
         String stringQuestion = sharedPref.getString("jsondata","0");
 
         if(stringQuestion!="0")

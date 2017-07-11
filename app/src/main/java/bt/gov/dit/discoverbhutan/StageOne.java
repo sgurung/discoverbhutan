@@ -217,8 +217,14 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
 
         switch(title){
 
-            case "Motithang Takin Preserve":
-                Intent intent = new Intent (this, Details.class);
+//            case "Motithang Takin Preserve":
+//                 intent = new Intent (this, Details.class);
+//                startActivity(intent);
+//                break;
+//
+
+            case "Ministry of Information and Communications":
+                Intent intent= new Intent (this, Details.class);
                 startActivity(intent);
                 break;
             default:
@@ -348,6 +354,9 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
         geoFenceMarker = map.addMarker(markerOptions);
         geoFenceMarker.showInfoWindow();
         drawGeofence(geoFenceMarker);
+        float zoom = 11f;
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, zoom);
+        map.animateCamera(cameraUpdate);
         //}
     }
 
@@ -394,7 +403,6 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
         Log.d(TAG, "createGeofencePendingIntent");
         if ( geoFencePendingIntent != null )
             return geoFencePendingIntent;
-
         Intent intent = new Intent( this, GeofenceTransitionService.class);
         return PendingIntent.getService(
                 this, GEOFENCE_REQ_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT );
@@ -547,7 +555,12 @@ public class StageOne extends AppCompatActivity implements RoutingListener, Goog
             if (title.equals("Motithang Takin Preserve")) {
 
                 badge = R.drawable.takin;
-            }  else {
+            } else if (title.equals("Lungtenzampa Bridge")) {
+                badge= R.drawable.lungtenzampasmall;
+            } else if(title.equals("Ministry of Information and Communications")) {
+                badge=R.drawable.moicsmall;
+            }
+            else {
                 badge = R.drawable.b;
             }
 

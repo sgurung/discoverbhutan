@@ -12,6 +12,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeMain">
+        <service
+            android:name=".GeofenceTransitionService"
+            android:exported="false" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -28,9 +31,7 @@
                 android:value="bt.gov.dit.discoverbhutan.Stages" />
         </activity>
 
-        <service
-            android:name=".GeofenceTransitionService"
-            android:exported="false" />
+
 
         <activity
             android:name=".Details"
@@ -66,7 +67,9 @@
         <activity
             android:name=".QuizActivity"
             android:theme="@style/AppTheme.Dark" />
-        <activity android:name=".FetchQuestion"></activity>
+        <activity android:name=".FetchQuestion">
+
+        </activity>
         <activity
             android:name=".ResultActivity"
             android:theme="@style/AppTheme.Dark" />
