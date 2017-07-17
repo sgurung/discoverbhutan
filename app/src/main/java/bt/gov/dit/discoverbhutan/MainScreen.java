@@ -3,6 +3,9 @@ package bt.gov.dit.discoverbhutan;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class NavigationDrawer extends AppCompatActivity
+import bt.gov.dit.discoverbhutan.fragments.GameMode;
+import bt.gov.dit.discoverbhutan.fragments.Profile;
+
+public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +49,12 @@ public class NavigationDrawer extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if(savedInstanceState == null) {
+            navigationView.setCheckedItem(R.id.play);
+            fragment = new GameMode();
+            loadFragment(fragment);
+        }
     }
 
     @Override
@@ -78,11 +93,15 @@ public class NavigationDrawer extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.play) {
+            fragment = new GameMode();
+
+
+        } else if (id == R.id.profile) {
+            fragment = new Profile();
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -94,8 +113,23 @@ public class NavigationDrawer extends AppCompatActivity
 
         }
 
+       loadFragment(fragment);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void loadFragment (Fragment fragment) {
+
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+
+
+
+        } else {
+            Log.e("MainActivity", "Error in creating fragment");
+        }
+
     }
 }

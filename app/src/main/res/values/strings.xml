@@ -120,7 +120,7 @@ Today, under the current bridge one can see wonderful impressions made by Phajo 
         "\nGood luck!"
     "\nNote: Inorder to play this game you need to keep your GPS location enabled."</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="title_activity_navigation_drawer">DiscoverBhutan</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
