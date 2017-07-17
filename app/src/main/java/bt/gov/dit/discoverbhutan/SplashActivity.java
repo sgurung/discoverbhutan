@@ -53,7 +53,7 @@ public class SplashActivity extends Activity {
                     }
                     Intent i;
                     if(loggedIn==true) {
-                        i = new Intent(SplashActivity.this, MainActivity.class);
+                        i = new Intent(SplashActivity.this, MainScreen.class);
                         finish();
                     } else {
                         i = new Intent(SplashActivity.this, LoginActivity.class);

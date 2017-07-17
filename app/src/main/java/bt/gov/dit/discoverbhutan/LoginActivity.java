@@ -210,7 +210,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("stagestatus",stagestatus);
 
                     editor.commit();
-                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent i = new Intent(getApplicationContext(), MainScreen.class);
                     startActivity(i);
 
                     // closing this screen
